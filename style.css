@@ -155,4 +155,7 @@ h1 {
 .navbar a:hover {
     color: #007bff;
 }
-
+.navbar .nav-text {
+    font-size: 18px;
+    font-weight: bold;
+}
