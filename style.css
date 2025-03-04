@@ -36,8 +36,9 @@ body {
 
 .nav-links {
     display: flex;
-    gap: 20px;
+    gap: 10px; /* Reduce gap to make links fit better */
     margin-left: auto;
+    flex-wrap: wrap; /* Ensure links don't go out of screen */
 }
 
 .navbar a {
