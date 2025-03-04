@@ -107,3 +107,23 @@ h1 {
         margin: 0 auto 10px auto; /* Ensure margin-bottom for consistent spacing */
     }
 }
+.at-home {
+    background-color: #007bff; /* Blue color for "At Home" */
+    color: white; /* White text for contrast */
+}
+
+.at-school {
+    background-color: #02991d; /* Green color for "At School" */
+    color: white; /* White text for contrast */
+}
+
+.book div {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.book-name {
+    color: inherit; /* Inherit color from parent */
+    flex: 1;
+}
