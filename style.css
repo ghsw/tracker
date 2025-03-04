@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f9;
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+#bookInput {
+    width: 100%;
+    max-width: 690px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+#addBookButton {
+    width: 100%;
+    max-width: 690px;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+#addBookButton:hover {
+    background-color: #218838;
+}
+.book {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+}
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+.button {
+    cursor: pointer;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.button:nth-child(1) {
+    background-color: #007bff;
+    color: white;
+}
+.button:nth-child(1):hover {
+    background-color: #0056b3;
+}
+.button:nth-child(2) {
+    background-color: #dc3545;
+    color: white;
+}
+.button:nth-child(2):hover {
+    background-color: #c82333;
+}
+@media (max-width: 769px) {
+    #bookInput, #addBookButton {
+        width: 100%;
+    }
+}
