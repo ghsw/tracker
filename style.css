@@ -122,8 +122,7 @@ h1 {
 .book-name {
     color: inherit; /* Inherit color from parent */
     flex: 1;
-}
-.navbar {
+}.navbar {
     display: flex;
     align-items: center;
     justify-content: space-between; /* Ensures space between text and links */
@@ -148,11 +147,15 @@ h1 {
     margin-right: 20px;
 }
 
+.nav-links {
+    display: flex;
+    gap: 20px; /* Add space between links */
+}
+
 .navbar a {
     text-decoration: none;
     color: #333;
     font-size: 18px;
-    margin-right: 20px;
     font-weight: bold;
 }
 
