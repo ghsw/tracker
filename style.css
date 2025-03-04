@@ -64,6 +64,9 @@ h1 {
     background-color: #dc3545;
     color: white;
 }
+.button:nth-child(2):hover {
+    background-color: #c82333;
+}
 
 .book div {
     overflow: hidden;
@@ -71,12 +74,15 @@ h1 {
     text-overflow: ellipsis;
 }
 
-
-.button:nth-child(2):hover {
-    background-color: #c82333;
-}
 @media (max-width: 769px) {
     #bookInput, #addBookButton {
         width: 100%;
+    }
+}
+
+@media (min-width: 850px) {
+    .book {
+        width: 700px;
+        margin: 0 auto;
     }
 }
