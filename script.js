@@ -67,3 +67,53 @@ function getCookie(name) {
     const parts = value.split(`; ${name}=`);
     if (parts.length === 2) return parts.pop().split(';').shift();
 }
+function addBook(name, status) {
+    const bookList = document.getElementById('bookList');
+    const bookDiv = document.createElement('div');
+    bookDiv.classList.add('book');
+
+    const bookNameDiv = document.createElement('div');
+    bookNameDiv.textContent = name;
+    bookNameDiv.classList.add('book-name');
+
+    const atHomeButton = document.createElement('button');
+    atHomeButton.textContent = status;
+    atHomeButton.classList.add('button', status.toLowerCase().replace(' ', '-'));
+    atHomeButton.addEventListener('click', () => {
+        const isAtHome = atHomeButton.textContent === 'At Home';
+        atHomeButton.textContent = isAtHome ? 'At School' : 'At Home';
+        atHomeButton.classList.toggle('at-home', !isAtHome);
+        atHomeButton.classList.toggle('at-school', isAtHome);
+        bookNameDiv.style.color = atHomeButton.classList.contains('at-home') ? '#007bff' : '#02991d'; // Update text color
+        saveBooks();
+        truncateText();
+    });
+
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Delete';
+    deleteButton.classList.add('button');
+    deleteButton.addEventListener('click', () => {
+        bookDiv.remove();
+        saveBooks();
+    });
+
+    const buttonsDiv = document.createElement('div');
+    buttonsDiv.classList.add('buttons');
+    buttonsDiv.appendChild(atHomeButton);
+    buttonsDiv.appendChild(deleteButton);
+
+    bookDiv.appendChild(bookNameDiv);
+    bookDiv.appendChild(buttonsDiv);
+    bookList.appendChild(bookDiv);
+    truncateText();
+}
+
+function loadBooks() {
+    const books = getCookie('books');
+    if (books) {
+        JSON.parse(books).forEach(book => {
+            addBook(book.name, book.status);
+            document.querySelector('.book:last-child .book-name').style.color = book.status === 'At Home' ? '#007bff' : '#02991d'; // Set initial text color
+        });
+    }
+}
