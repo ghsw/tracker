@@ -82,6 +82,7 @@ h1 {
     }
     #addBookButton {
         margin-top: 10px;
+        margin-bottom: 6px; /* Add this line for the 6px gap below the button */
     }
 }
 
@@ -106,4 +107,3 @@ h1 {
         margin: 0 auto 10px auto; /* Ensure margin-bottom for consistent spacing */
     }
 }
-
