@@ -2,61 +2,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-}
-
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: white;
-    padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-.navbar img {
-    height: 50px;
-    margin-right: 20px;
-}
-
-.nav-text {
-    font-size: 18px;
-    font-weight: bold;
-    margin-left: 20px;
-}
-
-.spacer {
-    flex-grow: 1;
-}
-
-.nav-links {
-    display: flex;
-    gap: 10px; /* Reduce gap to make links fit better */
-    margin-left: auto;
-    flex-wrap: wrap; /* Ensure links don't go out of screen */
-}
-
-.navbar a {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.navbar a:hover {
-    color: #007bff;
+    background-color: #f4f4f9; /* Change this to your original background color */
 }
 
 .container {
     max-width: 690px;
     margin: 80px auto 0 auto; /* Adjust margin-top to account for fixed navbar */
     padding: 20px;
-    background-color: white;
+    background-color: #f4f4f9; /* Change this to your original background color */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
 }
