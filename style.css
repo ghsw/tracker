@@ -77,10 +77,11 @@ h1 {
 }
 
 @media (max-width: 790px) {
-    #bookInput, #addBookButton {
-        width: 100%;
+    #bookInput {
+        width: 97%; /* Input is 97% on smaller screens */
     }
     #addBookButton {
+        width: 100%;
         margin-top: 10px;
         margin-bottom: 6px; /* Add this line for the 6px gap below the button */
     }
@@ -107,6 +108,7 @@ h1 {
         margin: 0 auto 10px auto; /* Ensure margin-bottom for consistent spacing */
     }
 }
+
 .at-home {
     background-color: #007bff; /* Blue color for "At Home" */
     color: white; /* White text for contrast */
@@ -116,40 +118,6 @@ h1 {
     background-color: #02991d; /* Green color for "At School" */
     color: white; /* White text for contrast */
 }
-
-.book div {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-
-.navbar {
-    display: flex;
-    align-items: center;
-    background-color: white;
-    padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-}
-
-.navbar img {
-    height: 50px;
-    margin-right: 20px;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-    margin-right: 20px;
-    font-weight: bold;
-}
-
-.navbar a:hover {
-    color: #007bff;
-}
-
 
 .book-name {
     color: inherit; /* Inherit color from parent */
