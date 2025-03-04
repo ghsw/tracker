@@ -64,6 +64,14 @@ h1 {
     background-color: #dc3545;
     color: white;
 }
+
+.book div {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
 .button:nth-child(2):hover {
     background-color: #c82333;
 }
