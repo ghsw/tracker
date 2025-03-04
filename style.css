@@ -128,7 +128,6 @@ h1 {
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Ensures space between text and links */
     background-color: white;
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -140,21 +139,23 @@ h1 {
     z-index: 1000;
 }
 
-.navbar .nav-text {
-    font-size: 18px;
-    font-weight: bold;
-    margin-left: 20px; /* Adds space between logo and text */
-}
-
 .navbar img {
     height: 50px;
     margin-right: 20px;
 }
 
+.nav-text {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.spacer {
+    flex-grow: 1; /* Takes up remaining space */
+}
+
 .nav-links {
     display: flex;
     gap: 20px; /* Add space between links */
-    flex-wrap: nowrap; /* Prevent links from wrapping to the next line */
 }
 
 .navbar a {
