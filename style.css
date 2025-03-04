@@ -123,11 +123,10 @@ h1 {
     color: inherit; /* Inherit color from parent */
     flex: 1;
 }
-
-/* Ensure this is added at the top or appropriately placed in your CSS file */
 .navbar {
     display: flex;
     align-items: center;
+    justify-content: space-between; /* Ensures space between text and links */
     background-color: white;
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -136,7 +135,12 @@ h1 {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000; /* Ensure it stays on top of other elements */
+    z-index: 1000;
+}
+
+.navbar .nav-text {
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .navbar img {
@@ -155,7 +159,9 @@ h1 {
 .navbar a:hover {
     color: #007bff;
 }
-.navbar .nav-text {
-    font-size: 18px;
-    font-weight: bold;
+
+@media (max-width: 725px) {
+    .nav-text {
+        display: none; /* Hide the text when screen width is less than 725px */
+    }
 }
