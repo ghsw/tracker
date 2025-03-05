@@ -117,3 +117,20 @@ function loadBooks() {
         });
     }
 }
+document.getElementById('addBookButton').addEventListener('click', function() {
+    const bookInput = document.getElementById('bookInput').value;
+    const atSchoolCheckbox = document.getElementById('atSchoolCheckbox').checked;
+
+    if (bookInput) {
+        const bookList = document.getElementById('bookList');
+        const bookItem = document.createElement('div');
+        
+        if (atSchoolCheckbox) {
+            bookItem.innerHTML = `<img src="https://www.greenford.ealing.sch.uk/_site/images/favicons/favicon.ico" width="16px" style="vertical-align: middle; margin-right: 5px;"> ${bookInput}`;
+        } else {
+            bookItem.textContent = bookInput;
+        }
+
+        bookList.appendChild(bookItem);
+    }
+});
