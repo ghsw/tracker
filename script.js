@@ -9,7 +9,6 @@ document.getElementById('addBookButton').addEventListener('click', () => {
         saveBooks();
         document.getElementById('bookInput').value = '';
     }
-    
 });
 
 function addBook(name, status) {
@@ -118,24 +117,3 @@ function loadBooks() {
         });
     }
 }
-document.getElementById('addBookButton').addEventListener('click', function() {
-    const bookInput = document.getElementById('bookInput').value;
-    const isAtSchool = true; // Set this based on your toggle logic
-
-    if (bookInput) {
-        const bookList = document.getElementById('bookList');
-        const bookItem = document.createElement('div');
-        
-        if (isAtSchool) {
-            bookItem.innerHTML = `<img src="https://www.greenford.ealing.sch.uk/_site/images/favicons/favicon.ico" width="16px" style="vertical-align: middle; margin-right: 5px;"> ${bookInput}`;
-        } else {
-            bookItem.textContent = bookInput;
-        }
-
-        bookList.appendChild(bookItem);
-    }
-});
-
-        bookList.appendChild(bookItem);
-    }
-});
