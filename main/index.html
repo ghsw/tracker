@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,23 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Tracker</title>
     <link rel="stylesheet" href="https://ghsw.github.io/tracker/style.css">
-   <link rel="icon" href="https://www.greenford.ealing.sch.uk/_site/images/favicons/favicon.ico" type="image/x-icon">
-    
+    <link rel="icon" href="https://www.greenford.ealing.sch.uk/_site/images/favicons/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div class="container">
-<img style="border-radius:15px;" src="https://i.ibb.co/mC3prFgH/Greenford-High-School-Logo.png" width="125px"s></img>
-<h4 style="color:#424242;">Greenford High School Web</h4>
+        <img style="border-radius:15px;" src="https://i.ibb.co/mC3prFgH/Greenford-High-School-Logo.png" width="125px"></img>
+        <h4 style="color:#424242;">Greenford High School Web</h4>
         <h1>Book Tracker</h1>
         <div class="input-button-wrapper">
             <input type="text" id="bookInput" placeholder="Enter book name" />
+            <label>
+                <input type="checkbox" id="atSchoolCheckbox" />
+                At School
+            </label>
             <button id="addBookButton">Add Book</button>
         </div>
         <div id="bookList"></div>
-<h6 style="color:#ba0000;">Clearing History Will Remove All Items!</h6>
+        <h6 style="color:#ba0000;">Clearing History Will Remove All Items!</h6>
     </div>
     <script src="https://ghsw.github.io/tracker/script.js"></script>
     <script src="https://ghsw.github.io/tracker/textmessage.js"></script>
 </body>
 </html>
-
