@@ -9,6 +9,7 @@ document.getElementById('addBookButton').addEventListener('click', () => {
         saveBooks();
         document.getElementById('bookInput').value = '';
     }
+    
 });
 
 function addBook(name, status) {
