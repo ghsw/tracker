@@ -9,6 +9,7 @@ function addBook() {
         return;
     }
 
+    
     const bookList = document.getElementById('bookList');
 
     const bookDiv = document.createElement('div');
