@@ -9,7 +9,6 @@ function addBook() {
         return;
     }
 
-    
     const bookList = document.getElementById('bookList');
 
     const bookDiv = document.createElement('div');
@@ -22,23 +21,17 @@ function addBook() {
     const buttonsDiv = document.createElement('div');
     buttonsDiv.className = 'buttons';
 
-    const atHomeButton = document.createElement('button');
-    atHomeButton.className = 'button at-home';
-    atHomeButton.textContent = 'At Home';
-    atHomeButton.addEventListener('click', () => markAtHome(bookDiv));
-
-    const atSchoolButton = document.createElement('button');
-    atSchoolButton.className = 'button at-school';
-    atSchoolButton.textContent = 'At School';
-    atSchoolButton.addEventListener('click', () => markAtSchool(bookDiv));
+    const toggleButton = document.createElement('button');
+    toggleButton.className = 'button';
+    toggleButton.textContent = 'At Home';
+    toggleButton.addEventListener('click', () => toggleLocation(bookDiv, toggleButton));
 
     const removeButton = document.createElement('button');
     removeButton.className = 'button remove';
     removeButton.textContent = 'Remove';
     removeButton.addEventListener('click', () => removeBook(bookDiv));
 
-    buttonsDiv.appendChild(atHomeButton);
-    buttonsDiv.appendChild(atSchoolButton);
+    buttonsDiv.appendChild(toggleButton);
     buttonsDiv.appendChild(removeButton);
 
     bookDiv.appendChild(bookNameDiv);
@@ -49,12 +42,14 @@ function addBook() {
     bookInput.value = '';
 }
 
-function markAtHome(bookDiv) {
-    bookDiv.querySelector('.book-name').style.color = 'blue';
-}
-
-function markAtSchool(bookDiv) {
-    bookDiv.querySelector('.book-name').style.color = 'green';
+function toggleLocation(bookDiv, button) {
+    if (button.textContent === 'At Home') {
+        bookDiv.querySelector('.book-name').style.color = 'green';
+        button.textContent = 'At School';
+    } else {
+        bookDiv.querySelector('.book-name').style.color = 'blue';
+        button.textContent = 'At Home';
+    }
 }
 
 function removeBook(bookDiv) {
